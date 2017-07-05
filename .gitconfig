@@ -1,0 +1,7 @@
+[user]
+	name = Austin M Crane
+	email = austin.crane@ennovar.wichita.edu
+[core]
+  editor = vim
+[color]
+  ui = true
