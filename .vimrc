@@ -41,8 +41,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'ryanoasis/vim-webdevicons'
 Plugin 'joegesualdo/jsdoc.vim'
 Plugin 'terryma/vim-multiple-cursors'
-
 Plugin 'fatih/vim-go'
+
 Bundle 'takac/vim-spotifysearch'
 Bundle 'moll/vim-node'
 Bundle 'Blackrush/vim-gocode'
@@ -64,8 +64,9 @@ set shiftwidth=2
 " " On pressing tab, insert 4 spaces
 set expandtab
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
-
-set encoding=utf-8
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 set nowrap
+
+colorscheme material
 " required if using https://github.com/bling/vim-airline
 " let g:airline_powerline_fonts=1
