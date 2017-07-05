@@ -1,5 +1,17 @@
 echo "Update system...."
 sudo apt-get update
+sudo apt-get install -y build-essential cmake
+sudo apt-get install -y python-dev python3-dev
+
+echo "Install YCM and other vundle packages..."
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+vim -c 'PluginInstall' -c 'qa!'
+mkdir -p ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --all
+
 echo "Installing git...."
 sudo apt-get install git
 
