@@ -9,17 +9,6 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-let g:ycm_confirm_extra_conf = 0 
-let g:jsx_ext_required = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:airline#extensions#tabline#enabled = 1
-
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -55,6 +44,7 @@ call vundle#end()
 " nnoremap jsd :<C-u>call JSDocAdd()<CR>
 
 filetype plugin indent on
+
 syntax on
 set number
 " show existing tab with 4 spaces width
@@ -63,9 +53,21 @@ set tabstop=2
 set shiftwidth=2
 " " On pressing tab, insert 4 spaces
 set expandtab
+set nowrap
+
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
-set nowrap
+let g:ycm_confirm_extra_conf = 0 
+let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:airline#extensions#tabline#enabled = 1
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
 
 colorscheme material
 " required if using https://github.com/bling/vim-airline
